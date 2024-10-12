@@ -1,0 +1,673 @@
+/* CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*css reset end*/
+.sr-only {
+    display: none; /* Hide the navigation */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #55BCD5; /* Header background */
+    padding: 10px;
+    text-align: center;
+}
+
+#logo img {
+    width: 100px; /* Logo size */
+}
+
+h1 {
+    font-size: 24px;
+    font-family: 'Molle', cursive;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Navigation Styles */
+nav {
+    margin-top: 10px;
+}
+
+#menu-toggle {
+    display: inline-block;
+}
+
+#toggle {
+    display: none; /* Hide the default checkbox */
+}
+
+label[for="toggle"] {
+    cursor: pointer;
+    background-color: #F6D64A; /* Button color */
+    padding: 10px;
+    border-radius: 5px;
+    color: #333;
+    display: inline-block;
+}
+
+ul {
+    display: none; /* Hide the menu by default */
+    list-style-type: none;
+}
+
+#toggle:checked + label + ul {
+    display: block; /* Show menu when checked */
+}
+
+ul li {
+    background-color: #fff; /* Background for menu items */
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Main Content Styles */
+main {
+    padding: 10px;
+}
+
+#intro {
+    margin-bottom: 20px;
+}
+
+#img-grid {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    gap: 10px; /* Space between images */
+}
+
+#img-grid img {
+    width: 100%; /* Responsive images */
+    border-radius: 10px;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 20px;
+}
+
+h2, h3, h4 {
+    font-family: 'Molle', cursive;
+    margin-bottom: 10px;
+}
+
+/* Contact Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #55BCD5;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #F6D64A; /* Button hover color */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #55BCD5;
+    color: #fff;
+    position: relative;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+/* Hide the skip link visually */
+#skip {
+    position: absolute; /* Remove from normal flow */
+    left: -9999px; /* Move off-screen */
+    /* Alternative: You can also use the following to keep it accessible */
+    /* clip: rect(0 0 0 0); 
+       border: 0; 
+       height: 1px; 
+       margin: -1px; 
+       overflow: hidden; 
+       padding: 0; 
+       width: 1px; */
+}
+
+/* When the link is focused (when it receives keyboard navigation) */
+#skip:focus {
+    position: static; /* Return to normal flow */
+    left: auto; /* Reset position */
+    background-color: #f0f0f0; /* Optional: add a background for visibility */
+    color: #000; /* Optional: change text color */
+    padding: 10px; /* Optional: add some padding */
+    z-index: 1000; /* Optional: bring it to the front */
+    border-radius: 4px; /* Optional: rounded corners */
+}
+
+/* Media Query for Desktop View */
+@media (min-width: 768px) {
+    /* General Styles for Desktop */
+    body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+
+    header {
+        display: flex; /* Use flexbox to align items */
+        justify-content: space-between; /* Space between header elements */
+        align-items: center; /* Center items vertically */
+        padding: 20px;
+       background: linear-gradient(to bottom, #55BCD5, #ffffff);
+    padding: 50px;
+    }
+  /* Desktop navigation */
+nav {
+    margin-top: 0;
+    position: relative;
+}
+
+/* Navigation Links */
+nav ul li {
+    margin: 0 8px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 3px;
+    background-color: white;
+    color: black; 
+    border-radius: 2px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect */
+nav ul li a:hover {
+    background-color: #F6D64A;
+}
+
+
+    /* Hide the toggle for desktop */
+    #toggle {
+        display: none; /* Hide the toggle checkbox */
+    }
+
+    label[for="toggle"] {
+        display: none; /* Hide the toggle label */
+    }
+
+    /* Navigation List */
+    ul {
+        display: flex;
+        gap: 2px;
+    }
+
+    ul li {
+        background-color: transparent;
+        margin: 0;
+    }
+
+    ul li a {
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    ul li a:hover {
+        background-color: #F6D64A; /* Hover color */
+    }
+
+    /* Logo and Header Styles */
+    .logo {
+        display: flex; /* Use flexbox for logo alignment */
+        align-items: center; /* Center the logo vertically */
+    }
+
+    .logo img {
+        max-height: 50px; /* Set maximum height for logo */
+        margin-right: 10px; /* Space between logo and header */
+    }
+
+    /* Footer Styles */
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #55BCD5;
+        color: #fff;
+        position: relative;
+    }
+}
+
+
+/* Mobile view for 320px width */
+@media (max-width: 320px) {
+    header {
+        padding: 10px;
+        background: linear-gradient(to bottom, #55BCD5, #ffffff);
+        position: relative;
+    }
+
+    .header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #logo img {
+        width: 60px;
+    }
+
+    #menu-toggle {
+        display: flex;
+        align-items: center;
+        padding: 0;
+    }
+
+    label[for="toggle"] {
+        background-color: #F6D64A;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    h1, p {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
+    p {
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    ul {
+        display: none;
+        list-style: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #499BD2;
+        z-index: 1000;
+        padding: 0;
+        margin: 0;
+    }
+
+    #toggle:checked + label + ul {
+        display: block;
+    }
+
+    ul li {
+        margin: 0;
+        padding: 0;
+        height: 50px;
+    }
+
+    ul li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        line-height: 50px;
+        text-align: center;
+        background-color: #499BD2;
+        color: white;
+        text-decoration: none;
+    }
+
+    ul li a:hover {
+        background-color: #357AB8;
+    }
+
+    #intro {
+        margin: 0;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    #img-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 0;
+    }
+
+    #img-grid img {
+        width: 100%;
+        margin: 0;
+        margin-top: 5px;
+        border-radius: 0;
+    }
+
+    main {
+        padding: 0;
+    }
+
+    #plan {
+        background-color: #F6D64A;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    #plan section {
+        background-color: #499BD2;
+        border: 2px solid #ffffff;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        width: calc(100% - 1px);
+        max-width: 300px;
+        aspect-ratio: 1/1;
+    }
+
+    #plan section img {
+        width: 40px;
+        margin-bottom: 5px;
+    }
+
+    #plan h4 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        color: #000;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    #testimonials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin: 10px 0;
+    }
+
+    #testimonials div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        width: 90%;
+    }
+
+    #testimonials img {
+        width: 100px;
+        height: auto;
+        border-radius: 50%;
+        margin-bottom: 5px;
+    }
+
+    #testimonials h4 {
+        font-size: 16px;
+        margin: 5px 0;
+        color: #333;
+    }
+
+    #testimonials p {
+        font-size: 14px;
+        color: #666;
+    }
+
+    #testimonials q {
+        font-size: 12px;
+        font-style: italic;
+        color: #555;
+    }
+
+    #about {
+        background-color: #499BD2;
+        padding: 20px;
+    }
+
+    #about h3 {
+        font-size: 24px;
+        text-align: left;
+        padding-bottom: 10px;
+    }
+
+    #card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    #about section {
+        border: none;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        width: 100%;
+        height: 100px;
+    }
+
+    #about section img {
+        width: 50px;
+        height: auto;
+        margin-bottom: 5px;
+    }
+
+    #about h4 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        color: #000;
+        text-align: center;
+        margin: 5px 0;
+        font-weight: bold;
+    }
+
+    #about p {
+        font-size: 12px;
+        color: #333;
+        text-align: center;
+    }
+
+    #contact {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    #contact h3 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+        margin: 10px 0;
+        padding: 10px;
+        border: 2px solid #9B26B0;
+        border-radius: 5px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    fieldset {
+        border: none;
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    label[for^="pref"] {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .radio-input {
+        display: flex;
+        align-items: center;
+    }
+
+    .radio-control {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #9B26B0;
+        border-radius: 50%;
+        margin-right: 5px;
+        position: relative;
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    input[type="radio"]:checked + .radio-control {
+        background-color: #9B26B0;
+    }
+
+    input[type="submit"] {
+        background-color: #9B26B0;
+        color: white;
+        padding: 10px;
+        border: 2px solid #9B26B0;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #7B1FA2;
+    }
+
+    .form-required {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        font-style: italic;
+        margin-left: 5px;
+    }
+
+    footer {
+        background-color: #EAEAEA;
+        padding: 20px;
+        text-align: center;
+    }
+
+    footer p {
+        color: black;
+        margin: 10px 0;
+        line-height: 1.6;
+    }
+
+    footer a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        margin: 5px 0;
+        font-size: 14px;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+}
+
